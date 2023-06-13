@@ -1,0 +1,11 @@
+output
+**__pycache__/
+*.pyc
+.idea
+*.html
+*.xml
+*.png
+*.swp 
+ 
+
+
