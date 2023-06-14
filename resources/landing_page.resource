@@ -1,5 +1,6 @@
 *** Settings ***
 Library    Browser
+Resource    login_page.resource
 
 *** Variables ***
 ${BASE_URL}    https://demo.patient.noonatest.com/patient/#/sign-in
@@ -31,12 +32,21 @@ ${COPYMARK}    //div[@class="copymark"]
 ${PRIVACY_STATEMENT_BUTTON}    //button//div[text()="${PRIVACY_STATEMENT_TEXT}"]
 ${PRIVACY_STATEMENT_CONTAINER}    //div[@class="container-privacy-policy"]
 ${PRIVACY_STATEMENT_CLOSE_BUTTON}    //button[@aria-label="Close dialog button"]
+${LANGUAGE_SELECTION_BOX}    //ng-select[@id="locale"]
+${DROP_DOWN_LANGUAGE_OPTION_LIST}    //div[@class="ng-dropdown-panel-items scroll-host"]
 
 *** Keywords ***
-Open Noona Log In Page
+Open Noona Landing Page
     New Context
     New Page
     Open Browser    ${BASE_URL}    ${BROWSER}
+
+Open Noona Log In Page
+    Open Noona Landing Page
+    Click Landing Page Log In Button
+
+Click Landing Page Log In Button
+    Click    ${LOGIN_BUTTON}
 
 Check Landing Page Is A Page For Patient
     Get Url    *=    patient
@@ -90,8 +100,7 @@ Check Privacy Statement Should Open A Privacy Statement Information Page
 Check Privacy Statement Information Page Is Closed
     Click    ${PRIVACY_STATEMENT_CLOSE_BUTTON}
     Get Element Count    ${PRIVACY_STATEMENT_CONTAINER}    ==    0
-    
 
-
-
-
+Check Language Selection Box Opens List Of Language Options
+    Click    ${LANGUAGE_SELECTION_BOX}
+    Get Element Count    ${DROP_DOWN_LANGUAGE_OPTION_LIST}    ==    1
