@@ -99,8 +99,8 @@ Check Privacy Statement Should Open A Privacy Statement Information Page
 
 Check Privacy Statement Information Page Is Closed
     Click    ${PRIVACY_STATEMENT_CLOSE_BUTTON}
-    Get Element Count    ${PRIVACY_STATEMENT_CONTAINER}    ==    0
+    Wait For Elements State    ${PRIVACY_STATEMENT_CONTAINER}    hidden
 
 Check Language Selection Box Opens List Of Language Options
     Click    ${LANGUAGE_SELECTION_BOX}
-    Get Element Count    ${DROP_DOWN_LANGUAGE_OPTION_LIST}    ==    1
+    Wait For Elements State    ${DROP_DOWN_LANGUAGE_OPTION_LIST}    visible
