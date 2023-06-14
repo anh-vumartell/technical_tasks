@@ -1,6 +1,6 @@
 # TECHNICAL TASKS
 ### DESCRIPTIONS
-This repo is my attempt at automating a medical web application
+This repo is my attempt at automating a medical web application.
 The system under test is found from here [Demo Page](https://demo.patient.noonatest.com/patient/#/sign-in)
 
 There are two (2) tasks to be accomplished:
@@ -23,6 +23,6 @@ Specifications:
 2. Set up the project with the above prerequisites
 3. From the command line
    - Invoke `robot -d logs -V variables/landing_page_en.py -V variables/login_page_en.py tests/` to run all test suites
-   - Invoke `robot -d logs -V variables/landing_page_en.py tests/landing_page.robot` 
-   - Invoke `robot -d logs -V variables/login_page_en.py tests/login_page.robot`
+   - Invoke `robot -d logs -V variables/landing_page_en.py tests/landing_page.robot` to run the Landing page's test suite
+   - Invoke `robot -d logs -V variables/login_page_en.py tests/login_page.robot` to run the Login pagen's test suite
 

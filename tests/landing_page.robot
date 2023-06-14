@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This test suite verify Noona mobild service's login page
+Documentation    This test suite verifies Noona mobile service's landing page
 Resource    ../resources/landing_page.resource
 Suite Setup    Open Noona Landing Page
 Suite Teardown    Close Browser
@@ -22,5 +22,3 @@ Check Landing Page Footer
     Check Privacy Statement Should Open A Privacy Statement Information Page
     Check Privacy Statement Information Page Is Closed
     Check Language Selection Box Opens List Of Language Options
-
-
