@@ -19,6 +19,15 @@ Check Landing Page Footer
     Check Web Version Number
     Check EU Compliance Warning Texts
     Check Copymark Text
-    Check Privacy Statement Should Open A Privacy Statement Information Page
-    Check Privacy Statement Information Page Is Closed
+    Check Privacy Statement Document Is Opened And Closed Correctly
+    Check About Document Is Opened And Closed Correctly
     Check Language Selection Box Opens List Of Language Options
+
+Check Privacy Statement Document Is Opened And Closed Correctly
+    Check Privacy Statement Button Should Open A Privacy Statement Information Page
+    Close Noona Dialog
+
+Check About Document Is Opened And Closed Correctly
+    Check About Button Should Open An About Information Page
+    Close Noona Dialog
+

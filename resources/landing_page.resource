@@ -29,9 +29,11 @@ ${CE_MARKING_WARNING_CONTENT1}    ${CE_MARKING_WARNING}//div[@class="content"]//
 ${CE_MARKING_WARNING_CONTENT2}    ${CE_MARKING_WARNING}//div[@class="content"]//div[2]
 ${CE_MARKING_WARNING_CONTENT3}    ${CE_MARKING_WARNING}//div[@class="content"]//div[3]
 ${COPYMARK}    //div[@class="copymark"]
-${PRIVACY_STATEMENT_BUTTON}    //button//div[text()="${PRIVACY_STATEMENT_TEXT}"]
+${PRIVACY_STATEMENT_BUTTON}    //button//div[text()="${PRIVACY_STATEMENT_BUTTON_TEXT}"]
 ${PRIVACY_STATEMENT_CONTAINER}    //div[@class="container-privacy-policy"]
-${PRIVACY_STATEMENT_CLOSE_BUTTON}    //button[@aria-label="Close dialog button"]
+${ABOUT_BUTTON}    //button//div[text()="${ABOUT_BUTTON_TEXT}"]
+${NOONA_DIALOG_CONTAINER}    //div[@class="modal-dialog noona-dialog"]
+${CLOSE_DIALOG_BUTTON}    //button[@aria-label="Close dialog button"]
 ${LANGUAGE_SELECTION_BOX}    //ng-select[@id="locale"]
 ${DROP_DOWN_LANGUAGE_OPTION_LIST}    //div[@class="ng-dropdown-panel-items scroll-host"]
 
@@ -93,13 +95,17 @@ Check EU Compliance Warning Texts
 Check Copymark Text
     Get Text    ${COPYMARK}    ==    ${COPYMARK_TEXT}
 
-Check Privacy Statement Should Open A Privacy Statement Information Page
+Check Privacy Statement Button Should Open A Privacy Statement Information Page
     Click    ${PRIVACY_STATEMENT_BUTTON}
-    Get Text    ${PRIVACY_STATEMENT_CONTAINER}    *=    ${NOONA_PRIVACY_DOCUMENT_TITLE_TEXT}
+    Get Text    ${NOONA_DIALOG_CONTAINER}    *=    ${NOONA_PRIVACY_DOCUMENT_TITLE_TEXT}
 
-Check Privacy Statement Information Page Is Closed
-    Click    ${PRIVACY_STATEMENT_CLOSE_BUTTON}
-    Wait For Elements State    ${PRIVACY_STATEMENT_CONTAINER}    hidden
+Close Noona Dialog
+    Click    ${CLOSE_DIALOG_BUTTON}
+    Wait For Elements State    ${NOONA_DIALOG_CONTAINER}    hidden
+
+Check About Button Should Open An About Information Page
+    Click    ${ABOUT_BUTTON}
+    Get Text    ${NOONA_DIALOG_CONTAINER}    *=    ${NOONA_ABOUT_DOCUMENT_TITLE_TEXT}
 
 Check Language Selection Box Opens List Of Language Options
     Click    ${LANGUAGE_SELECTION_BOX}
