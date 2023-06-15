@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    This test suite verifies Noona mobile service's landing page
-Resource    ../resources/landing_page.resource
+Resource    ../resources/common.resource
 Suite Setup    Open Noona Landing Page
 Suite Teardown    Close Browser
 

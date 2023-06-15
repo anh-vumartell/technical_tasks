@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    This test suite verifies Noona mobile service's login page
 Library    Browser
-Resource    ../resources/landing_page.resource
+Resource    ../resources/common.resource
 Test Setup    Open Noona Log In Page
 Test Teardown    Close Browser
 Test Template   Log In An User
