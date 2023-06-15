@@ -107,4 +107,4 @@ Check About Button Should Open An About Information Page
 
 Check Language Selection Box Opens List Of Language Options
     Click    ${LANGUAGE_SELECTION_BOX}
-    Wait For Elements State    ${DROP_DOWN_LANGUAGE_OPTION_LIST}    visible
+    Check Element Visibility    ${DROP_DOWN_LANGUAGE_OPTION_LIST}
