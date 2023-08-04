@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    This test suite verifies Noona mobile service's landing page
 Resource    ../resources/common.resource
+Variables    ../variables/landing_page_en.py
 Suite Setup    Open Noona Landing Page
 Suite Teardown    Close Browser
 
